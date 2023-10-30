@@ -1,0 +1,77 @@
+﻿@using YazilimGerceklemeveTest_IlkYardım.Models
+@model MessageViewModel
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>İlk Yardım Kitabı</title>
+    <!-- Favicon icon -->
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon.png">
+    <!-- Custom Stylesheet -->
+    <link href="~/adminTheme/css/style.css" rel="stylesheet">
+</head>
+<body>
+    <br />
+    <div class="row">
+        <div class="col">
+            <div class="card">
+                <div class="card-body">
+                    <p><h2>İlk Yardım Kitabı</h2></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br />
+    <form method="post">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col">
+                    <div class="card">
+                        <div class="card-body">
+                            <input type="text" class="form-control bg-transparent" placeholder=" Soru" asp-for="RequestMessage">
+                        </div>
+                    </div>
+                    <button class="btn btn-primary">Gönder</button>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <div class="card-body">
+                            <textarea class="textarea_editor form-control bg-light" rows="15" placeholder="Cevap ...">@ViewBag.Message</textarea>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+    @* <form method="post">
+    <div class="form-group">
+    <input type="text" class="form-control bg-transparent" placeholder=" Soru" asp-for="RequestMessage">
+    </div>
+    <div class="form-group">
+    <textarea class="textarea_editor form-control bg-light" rows="15" placeholder="Cevap ...">@ViewBag.Message</textarea>
+    </div>
+    <button class="btn btn-primary">Gönder</button>
+    </form> *@
+    @* <form method="post" class="form-control">
+    <div class="mesaj-kutusu" id="mesaj-kutusu">
+    <div class="mesaj">
+    <input type="text" class="gonderen" placeholder="Gönderilen Soru" asp-for="RequestMessage">
+    <span class="saat">@DateTime.Now.ToString("hh:mm tt")</span>
+    </div>
+    <div class="mesaj">
+    <p class="gonderen">@ViewBag.Message</p>
+    <span class="saat">@DateTime.Now.ToString("hh:mm tt")</span>
+    </div>
+    </div>
+    <button class="btn btn-primary">Gönder</button>
+    </form> *@
+</body>
+</html>
+
